@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TribeHeritage — Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gallary.css">
+
+<style>
+  .gallery-header {
+    text-align:center;
+    padding:60px 20px 20px;
+  }
+  .gallery-header h1 {
+    font-size:42px;
+    margin-bottom:10px;
+  }
+  .gallery-header p {
+    color:#9aa6b2;
+    max-width:640px;
+    margin:auto;
+  }
+
+  /* Gallery grid */
+  .gallery-grid {
+    max-width:1180px;
+    margin:40px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:22px;
+  }
+
+  .g-card {
+    background:rgba(255,255,255,0.05);
+    padding:12px;
+    border-radius:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.4);
+    transition:0.28s ease;
+  }
+  .g-card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 20px 38px rgba(0,0,0,0.55);
+  }
+
+  .g-card img {
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:10px;
+  }
+
+  .g-info {
+    margin-top:12px;
+  }
+  .g-info h3 {
+    margin:0 0 4px;
+    font-size:18px;
+  }
+  .g-info p {
+    margin:0;
+    font-size:14px;
+    color:#9aa6b2;
+  }
+
+  footer {
+    text-align:center;
+    padding:30px;
+    color:#9aa6b2;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER (reuse your same home header) -->
+<header class="site-header">
+  <div class="header-top container">
+    <a class="brand" href="index.html">
+      <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=100&q=80" 
+           alt="Logo" class="brand__img">
+      <span class="brand__text">DIGITAL MUSEUM OF<br>TRIBAL CULTURE</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="index.html">Home</a></li>
+        <li class="nav__item"><a href="tribes.html">Tribes</a></li>
+        <li class="nav__item"><a href="arts.html">Arts</a></li>
+        <li class="nav__item"><a href="festivals.html">Festivals</a></li>
+        <li class="nav__item"><a href="clothing.html">Clothing</a></li>
+        <li class="nav__item"><a href="music.html">Music</a></li>
+        <li class="nav__item"><a href="food.html">Food</a></li>
+        <li class="nav_item nav_item--active"><a href="gallery.html">Gallery</a></li>
+        <li class="nav__item"><a href="stories.html">Stories</a></li>
+        <li class="nav__item"><a href="events.html">Events</a></li>
+        <li class="nav__item"><a href="about.html">About</a></li>
+        <li class="nav__item"><a href="contact.html">Contact</a></li>
+        <li class="nav__item"><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- GALLERY TITLE -->
+<div class="gallery-header">
+  <h1>Visual Gallery — Tribal Life & Culture</h1>
+  <p>Explore traditional crafts, music, portraits and festivals from indigenous communities across India.</p>
+</div>
+
+<!-- GALLERY GRID -->
+<div class="gallery-grid">
+
+  <!-- Image 1 -->
+  <div class="g-card">
+    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="g-info">
+      <h3>Traditional Jewelry Art</h3>
+      <p>Handcrafted ornaments symbolizing cultural identity.</p>
+    </div>
+  </div>
+
+  <!-- Image 2 -->
+  <div class="g-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bhumij_tribal_woman.jpg/640px-Bhumij_tribal_woman.jpg" alt="">
+    <div class="g-info">
+      <h3>Bhumij Tribe</h3>
+      <p>Traditional attire and beadwork from Eastern India.</p>
+    </div>
+  </div>
+
+  <!-- Image 3 -->
+  <div class="g-card">
+    <img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="g-info">
+      <h3>Evening Ritual Fires</h3>
+      <p>Communities gathering to sing and share stories.</p>
+    </div>
+  </div>
+
+  <!-- Image 4 -->
+  <div class="g-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Santhals_in_a_group_dance.jpg/640px-Santhals_in_a_group_dance.jpg" alt="">
+    <div class="g-info">
+      <h3>Santhal Festival Dance</h3>
+      <p>Celebration through synchronized steps & drumming.</p>
+    </div>
+  </div>
+
+  <!-- Image 5 -->
+  <div class="g-card">
+    <img src="https://images.unsplash.com/photo-1526320059422-9b322c37b1ef?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="g-info">
+      <h3>Folk Music Traditions</h3>
+      <p>Wind instruments used for ceremonial storytelling.</p>
+    </div>
+  </div>
+
+  <!-- Image 6 -->
+  <div class="g-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Baiga_tribal_people_in_Madhya_Pradesh.jpg/640px-Baiga_tribal_people_in_Madhya_Pradesh.jpg" alt="">
+    <div class="g-info">
+      <h3>Baiga Tribe — Madhya Pradesh</h3>
+      <p>Known for tattoo traditions and forest rituals.</p>
+    </div>
+  </div>
+
+  <!-- Image 7 -->
+  <div class="g-card">
+    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="g-info">
+      <h3>Handloom Textiles</h3>
+      <p>Intricate patterns woven using wooden looms.</p>
+    </div>
+  </div>
+
+  <!-- Image 8 -->
+  <div class="g-card">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="g-info">
+      <h3>Tribal Masks & Woodwork</h3>
+      <p>Carved masks used in storytelling & rituals.</p>
+    </div>
+  </div>
+
+  <!-- Image 9 -->
+  <div class="g-card">
+    <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="g-info">
+      <h3>Forest Artisan</h3>
+      <p>Craftsman carving with traditional hand tools.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 TribeHeritage — Digital Museum Gallery
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav--open');
+  });
+</script>
+
+</body>
+</html>

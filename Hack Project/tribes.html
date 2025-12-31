@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TribeHeritage — Tribes</title>
+  <link rel="stylesheet" href="tribes.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-top container">
+      <a class="brand" href="index.html" aria-label="TribeHeritage home">
+        <img src="https://images.unsplash.com/photo-1520975912600-9d3ec5b5a6c3?q=80&w=96&auto=format&fit=crop&crop=faces" alt="logo" class="brand__img">
+        <div class="brand__text">
+          <strong>TribeHeritage</strong>
+          <small>Digital Museum of Tribal Culture</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="tribes.html">Tribes</a></li>
+          <li><a href="arts.html">Arts</a></li>
+          <li><a href="festivals.html">Festivals</a></li>
+          <li><a href="clothing.html">Clothing</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="profile-btn" href="profile.html" aria-label="Profile">
+          <img class="profile-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="profile">
+          <span class="profile-name">Profile</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main id="content" class="page-content container">
+    <header class="page-head">
+      <p class="kicker">Curated collection · living communities</p>
+      <h1>Tribal Communities Across India</h1>
+      <p class="lead">Explore a growing constellation of tribes and communities whose stories, art forms, and lifeways are being preserved in collaboration with local elders, artisans, and researchers.</p>
+    </header>
+
+    <!-- Filters -->
+    <section class="filters" aria-label="Tribes filters">
+      <form class="filters-form" onsubmit="return false;">
+        <label class="search">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden><path fill="currentColor" d="M21 21l-4.35-4.35"></path></svg>
+          <input type="search" placeholder="Search by tribe, region, or practice" aria-label="Search tribes">
+        </label>
+
+        <div class="filter-chips">
+          <button class="chip">Region <span class="chip-dot">⌄</span></button>
+          <button class="chip">Art form <span class="chip-dot">⌄</span></button>
+          <button class="chip">Status <span class="chip-dot">⌄</span></button>
+        </div>
+
+        <div class="filter-actions">
+          <button class="btn btn--clear" type="button">Clear</button>
+        </div>
+      </form>
+
+      <div class="active-chips" aria-hidden>
+        <span class="tag">Central India</span>
+        <span class="tag">Textile traditions</span>
+      </div>
+    </section>
+
+    <!-- Featured hero -->
+    <section class="featured">
+      <div class="featured-card">
+        <figure class="featured-media">
+          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1200&auto=format&fit=crop" alt="Featured tribe portrait">
+        </figure>
+        <div class="featured-body">
+          <div class="eyebrow">Featured tribe</div>
+          <h2>Warli · Forest Storytellers</h2>
+          <p class="muted">In the shadow of the Western Ghats, Warli artists map seasons, harvests, and ancestral myths through luminous white figures that circle village walls like constellations.</p>
+          <div class="featured-meta">
+            <span class="tag small">Maharashtra · Western Ghats</span>
+            <span class="tag small">Ritual wall painting</span>
+          </div>
+          <a class="btn btn--primary" href="tribe-warli.html">Read story →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid of tribe cards -->
+    <section class="grid-section" aria-label="Tribes grid">
+      <h3 class="section-title">Tribes in this collection</h3>
+      <p class="section-sub">Browse by region and practice. Click an image to view it larger.</p>
+
+      <div class="cards-grid">
+        <!-- card 1 -->
+        <article class="tribe-card">
+          <a href="tribe-warli.html" class="card-media" aria-hidden>
+            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=700&auto=format&fit=crop" alt="Warli artwork">
+          </a>
+          <div class="card-body">
+            <h4 class="tribe-name">Warli</h4>
+            <div class="card-tags">
+              <span class="tag">Ritual painting</span>
+            </div>
+            <p class="card-text">Line-drawn worlds where harvests, forests, and ancestors share the same circle.</p>
+            <a class="card-link" href="tribe-warli.html">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 2 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=700&auto=format&fit=crop" alt="Gond painting"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Gond</h4>
+            <div class="card-tags"><span class="tag">Narrative painting</span></div>
+            <p class="card-text">Dense forests reimagined as shimmering patterns of dots and mythic beings.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 3 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=700&auto=format&fit=crop" alt="Banjara textiles"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Banjara</h4>
+            <div class="card-tags"><span class="tag">Textiles & adornment</span></div>
+            <p class="card-text">Nomadic histories stitched in mirrors, shells, and saturated cloth.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 4 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=700&auto=format&fit=crop" alt="Toda shawl"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Toda</h4>
+            <div class="card-tags"><span class="tag">Embroidered shawls</span></div>
+            <p class="card-text">Monochrome shawls that encode sacred buffalo rituals and hilltop shrines.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 5 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?q=80&w=700&auto=format&fit=crop" alt="Santhal dance"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Santhal</h4>
+            <div class="card-tags"><span class="tag">Music & dance</span></div>
+            <p class="card-text">Drum-led rhythms that turn harvest clearings into swirling circles of song.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 6 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=700&auto=format&fit=crop" alt="Bhil dots"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Bhil</h4>
+            <div class="card-tags"><span class="tag">Dot paintings</span></div>
+            <p class="card-text">Every dot a grain, every grain a story of forests, hunts, and shared feasts.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 7 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=700&auto=format&fit=crop" alt="Khasi architecture"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Khasi</h4>
+            <div class="card-tags"><span class="tag">Architecture & matriliny</span></div>
+            <p class="card-text">Skywalk bridges, monoliths, and matrilineal lineages rooted in cloud forests.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 8 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=700&auto=format&fit=crop" alt="Rabari pastoral textile"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Rabari</h4>
+            <div class="card-tags"><span class="tag">Pastoral textiles</span></div>
+            <p class="card-text">Caravans that trail mirrored textiles across salt deserts and grasslands.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+
+        <!-- card 9 -->
+        <article class="tribe-card">
+          <a href="#" class="card-media"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=700&auto=format&fit=crop" alt="Konyak tattoos"></a>
+          <div class="card-body">
+            <h4 class="tribe-name">Konyak</h4>
+            <div class="card-tags"><span class="tag">Body art & woodwork</span></div>
+            <p class="card-text">Tattoos and carved facades that trace warrior pasts into present-day rituals.</p>
+            <a class="card-link" href="#">View profile →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Explore by region -->
+    <section class="map-teaser">
+      <div class="map-card">
+        <h4>Explore by landscape and region</h4>
+        <p>Glance at where communities are located, then open the full interactive map for deeper exploration.</p>
+        <a class="btn btn--outline" href="map.html">Explore by region →</a>
+      </div>
+
+      <aside class="mini-map" aria-hidden>
+        <svg viewBox="0 0 200 220" class="mini-map-svg" role="img" aria-label="regions diagram">
+          <rect x="6" y="6" width="188" height="208" rx="12" fill="rgba(255,255,255,0.02)"/>
+          <!-- simple pins -->
+          <g fill="none" stroke="#fff" stroke-opacity="0.07">
+            <circle cx="100" cy="60" r="18" />
+            <circle cx="60" cy="130" r="18" />
+            <circle cx="140" cy="150" r="18" />
+          </g>
+          <g fill="#FF6E50">
+            <circle cx="100" cy="60" r="4" />
+            <circle cx="60" cy="130" r="4" />
+            <circle cx="140" cy="150" r="4" />
+          </g>
+        </svg>
+      </aside>
+    </section>
+
+    <section class="curator-note">
+      <blockquote>
+        Curator's note — Every profile here is co-authored with community members and cross-checked with archival and field research.
+        We prioritise consent, source citations, and community review.
+      </blockquote>
+      <a class="btn btn--primary" href="research.html">Read methods & research →</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <strong>TribeHeritage · Digital Museum of Tribal Culture</strong>
+        <p class="muted">A cinematic, community-led archive preserving living tribal traditions across India for learners, researchers, and future generations.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="muted">hello@tribeheritage.org<br>+91 · Museum collaborations</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <nav class="footer-links">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small: open images in a CSS-only lightbox via hash target (links use anchors if needed)
+    // (Nothing required for demo)
+  </script>
+</body>
+</html>

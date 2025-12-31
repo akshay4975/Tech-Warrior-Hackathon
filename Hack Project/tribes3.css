@@ -1,0 +1,402 @@
+:root {
+  --bg: #0f1724;
+  --bg-2: #0b1320;
+  --muted: #9aa6b2;
+  --text: #f7f6f3;
+  --accent: #ff6e50;
+  --accent-2: #ffdda8;
+  --glass: rgba(255, 255, 255, 0.03);
+  --container: 1200px;
+  --transition: 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #07101a 100%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  font-size: 16px;
+}
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* header: match screenshot */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 11, 16, 0.92),
+    rgba(8, 12, 18, 0.6)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+}
+
+/* top row: brand | nav | actions */
+.header-top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 14px 0;
+}
+
+/* brand (left) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand__img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.brand__text strong {
+  display: block;
+  font-weight: 700;
+}
+.brand__text small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* centered nav — single-line pill buttons, compact */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.nav__list {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 6px 6px;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+/* nav item pills */
+.nav__item {
+  flex: 0 0 auto;
+}
+.nav__item a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 22px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted);
+  transition: all var(--transition);
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Home active style — pill with inner glow, slightly raised */
+.nav__item--active a {
+  color: var(--text);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
+  );
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.45),
+    inset 0 2px 8px rgba(255, 255, 255, 0.02);
+}
+
+/* hover states */
+.nav__item a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* More dropdown (same placement as earlier) */
+.nav__more {
+  display: none;
+  position: relative;
+}
+.more-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nav__more.open > .more-btn {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+.more-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 14, 20, 0.98),
+    rgba(8, 11, 18, 0.98)
+  );
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+  display: none;
+  z-index: 300;
+}
+.nav__more.open > .more-menu {
+  display: block;
+}
+.more-menu li {
+  padding: 8px;
+  border-radius: 8px;
+}
+.more-menu li a {
+  color: var(--muted);
+  font-weight: 600;
+}
+.more-menu li:hover a {
+  color: var(--text);
+}
+
+/* right actions: sign in (small) + profile circular orange pill */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sign-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* circular profile pill with orange gradient like screenshot */
+.profile-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff8a60, #ff5c3b);
+  box-shadow: 0 6px 18px rgba(255, 110, 80, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+.profile-pill__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* small divider line under header (thin) */
+.header-divider {
+  height: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+/* (set to 8–12px depending on design; matches screenshot spacing) */
+
+/* rest of your page styles (kept compact here) */
+/* --- copy your existing page CSS below, or keep the styles2.css content as-is --- */
+
+/* basic hero / content styling (copy from your original file) */
+.hero {
+  padding: 56px 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: start;
+}
+.kicker {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.02)
+  );
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.hero__title {
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 14px;
+  line-height: 1.02;
+}
+.accent {
+  color: var(--accent);
+}
+.hero__lead {
+  color: var(--muted);
+  max-width: 56ch;
+  margin-bottom: 18px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--glass);
+  color: var(--text);
+}
+.btn--primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #07101a;
+  font-weight: 600;
+}
+.btn--outline {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
+}
+.mini-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 8px;
+  border-radius: 10px;
+}
+.stats-card {
+  display: flex;
+  gap: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+.section {
+  padding: 34px 0;
+}
+.section-head h2 {
+  margin: 0 0 6px;
+}
+.muted {
+  color: var(--muted);
+}
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+.profile-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 12px;
+  align-items: center;
+}
+.profile-card__img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.profile-card__meta h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.profile-card__meta small {
+  color: var(--accent);
+  display: block;
+  margin: 6px 0;
+}
+.site-footer {
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  margin-top: 28px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+}
+
+/* responsive tweaks */
+@media (max-width: 1100px) {
+  .nav__list {
+    gap: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .brand__text small {
+    display: none;
+  }
+  .profile-pill {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media (max-width: 600px) {
+  .nav__list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+  }
+  .nav__item a {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .header-top {
+    padding: 12px 0;
+  }
+}

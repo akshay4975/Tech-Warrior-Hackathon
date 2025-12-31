@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TribeHeritage — Clothing</title>
+  <link rel="stylesheet" href="clothing2.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- HEADER: same layout as other pages -->
+  <header class="site-header">
+    <div class="header-top container">
+      <a class="brand" href="index.html" aria-label="TribeHeritage home">
+        <img class="brand__img" src="https://images.unsplash.com/photo-1520975912600-9d3ec5b5a6c3?auto=format&fit=crop&w=96&q=80" alt="logo" width="44" height="44">
+        <div class="brand__text">
+          <strong>TribeHeritage</strong>
+          <small>Digital Museum of Tribal Culture</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tribes.html">Tribes</a></li>
+          <li><a href="arts.html">Arts</a></li>
+          <li><a href="festivals.html">Festivals</a></li>
+          <li><a class="active" href="clothing.html">Clothing</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stories.html">Stories</a></li>
+  
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="profile-btn" href="profile.html" aria-label="Profile">
+          <img class="profile-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=64&q=80" alt="profile avatar" width="36" height="36">
+          <span class="profile-name">Profile</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-divider" aria-hidden></div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- HERO -->
+    <section class="hero-strap">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="kicker">Curated Collection · Costume & Textiles</p>
+          <h1>Clothing, Textiles & Adornment</h1>
+          <p class="lead">Explore traditional garments, weaving systems, dyes and ornamentation across regional tribes — with notes on technique, material and cultural meaning.</p>
+          <div class="hero-ctas">
+            <a class="btn btn--primary" href="#gallery">Browse Garments</a>
+            <a class="btn btn--outline" href="research.html">Methods & Research</a>
+          </div>
+        </div>
+
+        <figure class="hero-image" aria-hidden>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1503342452485-86a3586e94e2?auto=format&fit=crop&w=1400&q=80" alt="Woman in handwoven textile">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters" aria-label="Clothing filters">
+      <form class="filters-form" onsubmit="return false;">
+        <label class="search" title="Search garments">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden><path fill="currentColor" d="M21 21l-4.35-4.35"></path></svg>
+          <input type="search" placeholder="Search by garment, material, or tribe" aria-label="Search garments">
+        </label>
+
+        <div class="filter-chips">
+          <button class="chip" type="button">Region ▾</button>
+          <button class="chip" type="button">Material ▾</button>
+          <button class="chip" type="button">Technique ▾</button>
+        </div>
+
+        <div class="filter-actions">
+          <button class="btn btn--clear" type="button">Clear</button>
+        </div>
+      </form>
+
+      <div class="active-chips">
+        <span class="tag">Handweave</span>
+        <span class="tag">Natural dye</span>
+      </div>
+    </section>
+
+    <!-- Gallery grid -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-head">
+        <h2>Featured garments & textiles</h2>
+        <p class="muted">Select items show technique, region, and cultural context at a glance.</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- card A -->
+        <article class="garment-card">
+          <a class="media" href="#">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="Embroidered shawl">
+            <div class="media-label">
+              <strong>Embroidered Shawl</strong>
+              <small>Hand-embroidered · Toda</small>
+            </div>
+          </a>
+          <div class="card-body">
+            <p class="muted">Monochrome shawls carrying ceremonial motifs and lineage marks.</p>
+            <div class="meta-row">
+              <span class="pill">Wool</span>
+              <span class="pill">Embroidery</span>
+            </div>
+            <a class="card-link" href="#">View details →</a>
+          </div>
+        </article>
+
+        <!-- card B -->
+        <article class="garment-card">
+          <a class="media" href="#">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1520975698518-2cb5b9d0f6a8?auto=format&fit=crop&w=1200&q=80" alt="Handloom sari">
+            <div class="media-label"><strong>River-stitched Sari</strong><small>Handloom · Kora</small></div>
+          </a>
+          <div class="card-body">
+            <p class="muted">Natural-dyed cotton sari woven in narrow looms with river motifs.</p>
+            <div class="meta-row"><span class="pill">Cotton</span><span class="pill">Handweave</span></div>
+            <a class="card-link" href="#">View details →</a>
+          </div>
+        </article>
+
+        <!-- card C -->
+        <article class="garment-card">
+          <a class="media" href="#">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?auto=format&fit=crop&w=1200&q=80" alt="Colorful embroidered vest">
+            <div class="media-label"><strong>Beaded Vest</strong><small>Banjara · Ornament</small></div>
+          </a>
+          <div class="card-body">
+            <p class="muted">Mirror work and bead embroidery used for ceremonies and display.</p>
+            <div class="meta-row"><span class="pill">Mirrorwork</span><span class="pill">Beading</span></div>
+            <a class="card-link" href="#">View details →</a>
+          </div>
+        </article>
+
+        <!-- card D -->
+        <article class="garment-card">
+          <a class="media" href="#">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1503342452485-86a3586e94e2?auto=format&fit=crop&w=1200&q=80" alt="Hand-dyed fabric">
+            <div class="media-label"><strong>Indigo Cloth</strong><small>Natural dye · Rabari</small></div>
+          </a>
+          <div class="card-body">
+            <p class="muted">Resist-dyed textiles using locally foraged indigo and fermentation vats.</p>
+            <div class="meta-row"><span class="pill">Natural dye</span><span class="pill">Resist</span></div>
+            <a class="card-link" href="#">View details →</a>
+          </div>
+        </article>
+
+        <!-- card E -->
+        <article class="garment-card">
+          <a class="media" href="#">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Warp Ikat">
+            <div class="media-label"><strong>Warp Ikat</strong><small>Technique · Tribal weaver</small></div>
+          </a>
+          <div class="card-body">
+            <p class="muted">Complex pre-dyed warps produce sharp, blurred patterns after weaving.</p>
+            <div class="meta-row"><span class="pill">Ikat</span><span class="pill">Dye</span></div>
+            <a class="card-link" href="#">View details →</a>
+          </div>
+        </article>
+
+        <!-- card F -->
+        <article class="garment-card">
+          <a class="media" href="#">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1200&q=80" alt="Bead Necklace">
+            <div class="media-label"><strong>Bead Necklace</strong><small>Adornment · Bhil</small></div>
+          </a>
+          <div class="card-body">
+            <p class="muted">Layered bead necklaces used as identity markers and ceremonial gifts.</p>
+            <div class="meta-row"><span class="pill">Beads</span><span class="pill">Adornment</span></div>
+            <a class="card-link" href="#">View details →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Learning panel -->
+    <section class="learn-panel">
+      <div class="learn-card">
+        <h3>How clothing preserves knowledge</h3>
+        <p class="muted">Garments act as living records — indicating trade routes, clan membership, and seasonal knowledge. Browse method notes, dye recipes and loom diagrams in our research section.</p>
+        <a class="btn btn--outline" href="research.html">Read research →</a>
+      </div>
+
+      <aside class="mini-map" aria-hidden>
+        <svg viewBox="0 0 200 220" class="mini-map-svg" role="img" aria-label="regions diagram">
+          <rect x="6" y="6" width="188" height="208" rx="12" fill="rgba(255,255,255,0.02)"/>
+          <g fill="none" stroke="#fff" stroke-opacity="0.07">
+            <circle cx="100" cy="60" r="18" />
+            <circle cx="60" cy="130" r="18" />
+            <circle cx="140" cy="150" r="18" />
+          </g>
+          <g fill="#FF6E50">
+            <circle cx="100" cy="60" r="4" />
+            <circle cx="60" cy="130" r="4" />
+            <circle cx="140" cy="150" r="4" />
+          </g>
+        </svg>
+      </aside>
+    </section>
+
+    <section class="curator-note">
+      <blockquote>
+        Curator's note — Our clothing collection highlights technique, provenance and permissioned use. When possible, images and descriptions are co-produced with community partners.
+      </blockquote>
+      <a class="btn btn--primary" href="contact.html">Request access →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <strong>TribeHeritage · Digital Museum of Tribal Culture</strong>
+        <p class="muted">A community-led archive—preserving and presenting living tribal clothing traditions for research and learning.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="muted">hello@tribeheritage.org<br>+91 · Museum collaborations</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <nav class="footer-links">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
